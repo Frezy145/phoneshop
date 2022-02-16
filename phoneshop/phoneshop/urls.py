@@ -15,9 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-import basepage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('^basepage/$', include(basepage.urls)),
+    #path('^basepage/$', include(basepage.urls)),
 ]

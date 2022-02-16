@@ -1,0 +1,389 @@
+<! DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset = "utf-8"/>
+        <title>Phoneshop | Base Page </title>
+        
+        <!-- links -->
+        <link rel ="stylesheet" href ="../static/baseapp/css/style.css"/>
+        <link rel ="stylesheet" href ="../static/baseapp/fontawesome-free-6.0.0-beta3-web/css/all.css" />
+        
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <div class="container-fluid">
+                
+                <!-- Logo -->
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <img src="../static/baseapp/img/ph_logo0.png" height="50" alt="CoolBrand"> FCSS
+                </a>
+                
+                <!-- Responsive Toggle button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <i class = "fas fa-bars"></i>
+                </button>
+                
+                <!-- Navbar-nav  -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Message</a>
+                        </li>
+                    </ul>
+                    <div class="navbar-nav">
+                        <a href="#" class="nav-item nav-link">Logout</a>
+                    </div>
+                </div>
+                
+                <!-- Search  "it seem like d-flex has ms-auto by default" -->
+                <form class="d-flex form-inline my-2 my-lg-0">
+                    <div class="input-group">                    
+                        <input type="text" class="form-control" placeholder="Search">
+                        <button type="button" class="btn btn-secondary"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+                
+                <!-- Dropdown at the end -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Messages</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Inbox</a>
+                        <a href="#" class="dropdown-item">Sent</a>
+                        <a href="#" class="dropdown-item">Drafts</a>
+                    </div>
+                </div>
+                
+                <!-- Offcanvas sidebar button -->
+                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+                    <i class = "fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Body contents -->
+        <div class="container-fluid">
+            <div class="row">
+                
+                <!-- Sidebar -->
+                <div class="col-auto col-md-2 col-xl-2 px-sm-2 px-0">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white position-fixed" style = "height : 500px;">
+                        
+                        <!-- Sidebar title -->
+                        <span class="fs-5 d-none d-md-inline text-black">Menu</span>
+                        
+                        <!-- Sidebar content -->
+                        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                            
+                            <li class="nav-item">
+                                <a href="#" class="nav-link align-middle px-0">
+                                    <i class="fa-solid fa-house"></i><span class="ms-1 d-none d-md-inline">Home</span>
+                                </a>
+                            </li>
+                            
+                            <!-- Dashbord -->
+                            <li>
+                                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                    <i class="fa-solid fa-gauge"></i><span class="ms-1 d-none d-md-inline">Dashboard</span> </a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="#" class="nav-link px-0"> <span class="d-none d-md-inline">Item</span> 1 </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link px-0"> <span class="d-none d-md-inline">Item</span> 2 </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <!-- Others -->
+                            <li>
+                                <a href="#" class="nav-link px-0 align-middle">
+                                    <i class="fa-solid fa-table"></i><span class="ms-1 d-none d-md-inline">Orders</span>
+                                </a>
+                            </li>
+                            
+                            <!-- Bootstrap -->
+                            <li>
+                                <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                                    <i class="fa-brands fa-bootstrap"></i><span class="ms-1 d-none d-md-inline">Bootstrap</span>
+                                </a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="#" class="nav-link px-0">
+                                            <span class="d-none d-md-inline">Item</span> 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link px-0">
+                                            <span class="d-none d-md-inline">Item</span> 2
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <!-- Products -->
+                            <li>
+                                <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                    <i class="fa-solid fa-grip"></i><span class="ms-1 d-none d-md-inline">Products</span>
+                                </a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="#" class="nav-link px-0">
+                                            <span class="d-none d-md-inline">Product</span> 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link px-0">
+                                            <span class="d-none d-md-inline">Product</span> 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link px-0">
+                                            <span class="d-none d-md-inline">Product</span> 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link px-0">
+                                            <span class="d-none d-md-inline">Product</span> 4
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <!-- Customers -->
+                            <li>
+                                <a href="#" class="nav-link px-0 align-middle">
+                                    <i class="fa-solid fa-users"></i> <span class="ms-1 d-none d-md-inline">Customers</span>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <hr>
+                        
+                        <!-- GitHub profile -->                    
+                        <div class="dropdown pb-4">
+                            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://github.com/Frezy145.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                                <span class="d-none d-md-inline mx-1 text-black">Freedom</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                                <li>
+                                    <a class="dropdown-item" href="#">New project...</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Settings</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Profile</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Sign out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Content -->
+                <div class="col py-3 ms-5 ms-md-0 lead">
+                    Content area...
+                    
+                    <!-- Carousel -->
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button btn-dark" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button btn-dark" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button btn-dark" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button btn-dark" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button btn-dark" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../static/baseapp/img/iphone9-3.jpg" class="d-block w-100 rounded" alt="...">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Iphone 9</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../static/baseapp/img/iphone13.jpg" class="d-block w-100 rounded" alt="...">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Iphone 13</h5>
+                                    <p>Some representative placeholder content for the second slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../static/baseapp/img/iphone10-3.jpg" class="d-block w-100 rounded" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Iphone 10</h5>
+                                    <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../static/baseapp/img/oppof1s-4.jpg" class="d-block w-100 rounded" alt="...">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Oppo F1S</h5>
+                                    <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../static/baseapp/img/iphone11-3.jpg" class="d-block w-100 rounded" alt="...">
+                                <div class="carousel-caption d-none d-md-block text-dark">
+                                    <h5>Iphone 11</h5>
+                                    <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    
+                    <hr>
+                    
+                    <!-- Cards -->
+                    <div class = "d-flex flex-md-row flex-column justify-content-around align-items-center align-items-sm-start mb-3">
+                        <div class="card bg-body" style="width: 18rem;">
+                            <img src="../static/baseapp/img/iphone6-1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column align-items-center">
+                              <h3 class="card-title">Iphone 6</h3>
+                              <div class = "d-flex flex-row justify-content-around">
+                                <p class="card-text fst-italic text-decoration-line-through mx-3 text-danger">1300 €</p> <br>
+                                <p class="card-text mx-3 text-success">1100 €</p>
+                              </div>
+                              <div>
+                                <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down fa-2x"></i></a>
+                                <a href="#" class="btn btn-primary btn-lg px-5">Buy</a>
+                              </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card bg-body" style="width: 18rem;">
+                            <img src="../static/baseapp/img/iphone7-1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column align-items-center">
+                              <h3 class="card-title">Iphone 7</h3>
+                              <div class = "d-flex flex-row justify-content-around">
+                                <p class="card-text fst-italic text-decoration-line-through mx-3 text-danger">1400 €</p> <br>
+                                <p class="card-text mx-3 text-success">1150 €</p>
+                              </div>
+                              <div>
+                                <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down fa-2x"></i></a>
+                                <a href="#" class="btn btn-primary btn-lg px-5">Buy</a>
+                              </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card bg-body" style="width: 18rem;">
+                            <img src="../static/baseapp/img/iphone8-1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column align-items-center">
+                              <h3 class="card-title">Iphone 8</h3>
+                              <div class = "d-flex flex-row justify-content-around">
+                                <p class="card-text fst-italic text-decoration-line-through mx-3 text-danger">1550 €</p> <br>
+                                <p class="card-text mx-3 text-success">1400 €</p>
+                              </div>
+                              <div>
+                                <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down fa-2x"></i></a>
+                                <a href="#" class="btn btn-primary btn-lg px-5">Buy</a>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Second cards -->
+                    <div class = "d-flex flex-md-row flex-column justify-content-around align-items-center align-items-sm-start mb-3">
+                        <div class="card bg-body" style="width: 18rem;">
+                            <img src="../static/baseapp/img/iphone10-2.png" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column align-items-center">
+                              <h3 class="card-title">Iphone 10</h3>
+                              <div class = "d-flex flex-row justify-content-around">
+                                <p class="card-text fst-italic text-decoration-line-through mx-3 text-danger">1450 €</p> <br>
+                                <p class="card-text mx-3 text-success">1150 €</p>
+                              </div>
+                              <div>
+                                <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down fa-2x"></i></a>
+                                <a href="#" class="btn btn-primary btn-lg px-5">Buy</a>
+                              </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card bg-body" style="width: 18rem;">
+                            <img src="../static/baseapp/img/iphone11-1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column align-items-center">
+                              <h3 class="card-title">Iphone 11</h3>
+                              <div class = "d-flex flex-row justify-content-around">
+                                <p class="card-text fst-italic text-decoration-line-through mx-3 text-danger">1500 €</p> <br>
+                                <p class="card-text mx-3 text-success">1300 €</p>
+                              </div>
+                              <div>
+                                <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down fa-2x"></i></a>
+                                <a href="#" class="btn btn-primary btn-lg px-5">Buy</a>
+                              </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card bg-body" style="width: 18rem;">
+                            <img src="../static/baseapp/img/iphone12-1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-column align-items-center">
+                              <h3 class="card-title">Iphone 12</h3>
+                              <div class = "d-flex flex-row justify-content-around">
+                                <p class="card-text fst-italic text-decoration-line-through mx-3 text-danger">1550 €</p> <br>
+                                <p class="card-text mx-3 text-success">1400 €</p>
+                              </div>
+                              <div>
+                                <a href="#" class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down fa-2x"></i></a>
+                                <a href="#" class="btn btn-primary btn-lg px-5">Buy</a>
+                              </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <!-- Details column -->
+                <div class="col-auto col-md-2 col-xl-2 px-sm-2 px-0">
+                    <div class = "h6">
+                        Page links
+                    </div>
+                    <div class ="p">
+                        ...
+                    </div>
+                </div>
+                
+                <!-- Offcanvas sidebars -->
+                <div class="offcanvas offcanvas-end " data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body small">
+                        ...
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom navbar -->
+        <div class = "navbar navbar-expand-lg bg-secondary">
+            <div class = "container-fluid">
+                <p class="h6">Bottom navbar, sponsorship, contacts</p>
+            </div>
+        </div>
+    </body>    
+</html>

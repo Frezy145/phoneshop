@@ -1,9 +1,10 @@
 """
 Baseapp urls 
-""""
+"""
 
 from django.urls import path
+from baseapp import views
 
-urlspatterns = [
-    path (r'^$', views.index)
+urlpatterns = [
+    path ('', views.index)
 ]

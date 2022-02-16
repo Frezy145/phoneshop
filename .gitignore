@@ -7,6 +7,8 @@ bin-release/
 # Other files and folders
 .settings/
 .phoneenv/
+fontawesome-free-6.0.0-beta3-web/
+node_modules/
 
 # Executables
 *.swf
